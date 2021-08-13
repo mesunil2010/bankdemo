@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon server.js --exec",
+    "test": "NODE_ENV=testing jest --forceExit"
   },
   "author": "sunil chaulagain",
   "license": "ISC",
@@ -15,5 +16,18 @@
     "koa-bodyparser": "^4.3.0",
     "koa-json": "^2.0.2",
     "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.0.6",
+    "install": "^0.13.0",
+    "jest": "^27.0.6",
+    "npm": "^7.20.6",
+    "supertest": "^6.1.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }

@@ -3,7 +3,7 @@ import Router from 'koa-router'
 
 const router = new Router
 
-router.get('/', async ctx => {
+router.get('/api/v1/', async ctx => {
     ctx.body = {
         message: 'Hello World'
     }
