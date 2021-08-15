@@ -1,7 +1,6 @@
 import Transaction from '../models/Transaction.js'
 
 class AccountController {
-
     async index(ctx) {
         const storage = ctx.db
         try {
@@ -84,8 +83,6 @@ class AccountController {
         
         return true
     }
-
-
 }
 
 export default AccountController

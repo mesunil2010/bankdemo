@@ -6,13 +6,6 @@ class Memory {
         this.transactions = []
     }
 
-    static getInstance() {
-        if (!this.instance) {
-            this.instance = new Memory();
-        }
-        return this.instance;
-    }
-
     set(key, value) {
         if (this[key]) {
             this[key].push(value)
@@ -33,7 +26,6 @@ class Memory {
         else
             throw Error('Invalid table')
     }
-
 }
 
 const seedAccount = () => {
